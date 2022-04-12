@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="app/src/main/res/layout/activity_calendar_list.xml" value="0.3780125935872396" />
+        <entry key="app/src/main/res/layout/activity_class_list.xml" value="0.3471623738606771" />
+        <entry key="app/src/main/res/layout/activity_date.xml" value="0.5186681111653646" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.5317708333333333" />
+        <entry key="app/src/main/res/layout/course_layout.xml" value="0.3645833333333333" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

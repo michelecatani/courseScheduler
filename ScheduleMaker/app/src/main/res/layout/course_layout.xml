@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="399dp"
+        android:layout_height="144dp"
+        android:layout_marginTop="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/courseNameTextView"
+                android:layout_width="200dp"
+                android:layout_height="44dp"
+                android:text="course name"
+                android:textColor="#000000"
+                android:textSize="34sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/courseDescriptionTextView"
+                android:layout_width="399dp"
+                android:layout_height="59dp"
+                android:text="course description"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dayOfWeekTextView" />
+
+            <TextView
+                android:id="@+id/dayOfWeekTextView"
+                android:layout_width="91dp"
+                android:layout_height="28dp"
+                android:layout_marginTop="14dp"
+                android:text="day of week"
+                android:textAlignment="viewStart"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/courseNameTextView" />
+
+            <TextView
+                android:id="@+id/startTimeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="start"
+                android:textColor="#000000"
+                app:layout_constraintStart_toEndOf="@+id/dayOfWeekTextView"
+                app:layout_constraintTop_toBottomOf="@+id/courseNameTextView" />
+
+            <TextView
+                android:id="@+id/endTimeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="end"
+                android:textColor="#000000"
+                app:layout_constraintStart_toEndOf="@+id/dayOfWeekTextView"
+                app:layout_constraintTop_toBottomOf="@+id/startTimeTextView" />
+
+            <Button
+                android:id="@+id/addCourseButton"
+                android:layout_width="140dp"
+                android:layout_height="70dp"
+                android:layout_marginStart="43dp"
+                android:layout_marginTop="7dp"
+                android:text="Add Course"
+                app:layout_constraintStart_toEndOf="@+id/courseNameTextView"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
