@@ -5,6 +5,7 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
+import android.util.Log;
 
 public class ClassListActivity extends AppCompatActivity {
     RecyclerView courseListRecyclerView;
@@ -22,6 +23,8 @@ public class ClassListActivity extends AppCompatActivity {
         mCourseViewModel = new ViewModelProvider(this).get(CourseViewModel.class);
         mCourseViewModel.getAllCourses().observe(this, courses -> {
             adapter.submitList(courses);
+            Log.d("ekjotm", courses.size() + "");
         });
+
     }
 }
