@@ -17,6 +17,11 @@ public interface CourseDAO {
     @Query("Select * FROM course_table")
     LiveData<List<Course>> getAllCourses();
 
+
+    @Query("Select * FROM course_table where dayOfWeek = :day")
+    LiveData<List<Course>> getCourse(String day);
+
+
     @Query("DELETE FROM course_table")
     void deleteAll();
 }

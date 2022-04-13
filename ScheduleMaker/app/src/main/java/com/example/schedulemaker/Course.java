@@ -17,12 +17,24 @@ public class Course {
     public String startTime; // this will be a string in 24 hour time xx:xx
     public String endTime; // same as the previous variable
 
-    public Course(String courseName, String courseDescription, String dayOfWeek, String startTime, String endTime){
+    public Course(String courseName, String courseDescription, String dayOfWeek, String startTime, String endTime) {
 
         this.courseDescription = courseDescription;
         this.courseName = courseName;
         this.dayOfWeek = dayOfWeek;
         this.endTime = endTime;
         this.startTime = startTime;
+    }
+
+    @NonNull
+    @Override
+    public String toString() {
+        return "Course{" +
+                "courseName='" + courseName + '\'' +
+                ", courseDescription='" + courseDescription + '\'' +
+                ", dayOfWeek='" + dayOfWeek + '\'' +
+                ", startTime='" + startTime + '\'' +
+                ", endTime='" + endTime + '\'' +
+                '}';
     }
 }
