@@ -8,9 +8,8 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/scheduleCardView"
         android:layout_width="399dp"
-        android:layout_height="144dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="25dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -18,91 +17,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <Button
-                android:id="@+id/dropCourseButton"
-                android:layout_width="140dp"
-                android:layout_height="70dp"
-                android:layout_marginStart="32dp"
-                android:layout_marginTop="12dp"
-                android:text="drop"
-                app:layout_constraintStart_toEndOf="@+id/scheduleCourseNameTextView"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/scheduleEndTimeTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="44dp"
-                android:text="end"
-                android:textColor="#000000"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.253"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.234" />
-
-            <TextView
-                android:id="@+id/scheduleStartTimeTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="92dp"
-                android:text="start"
-                android:textColor="#000000"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/scheduleCourseNameTextView"
-                app:layout_constraintVertical_bias="0.0" />
-
-            <TextView
-                android:id="@+id/scheduleDayOfWeekTextView"
-                android:layout_width="91dp"
-                android:layout_height="28dp"
-                android:layout_marginStart="4dp"
-                android:layout_marginTop="12dp"
-                android:text="day of week"
-                android:textAlignment="viewStart"
-                android:textColor="#000000"
-                android:textSize="16sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/scheduleCourseNameTextView" />
-
             <TextView
                 android:id="@+id/scheduleCourseNameTextView"
-                android:layout_width="200dp"
-                android:layout_height="44dp"
-                android:text="course name"
-                android:textColor="#000000"
-                android:textSize="34sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/scheduleCourseDescriptionTextView"
-                android:layout_width="399dp"
-                android:layout_height="59dp"
-                android:layout_marginBottom="1dp"
-                android:text="course description"
-                android:textSize="20sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/trialCardView"
-        android:layout_width="399dp"
-        android:layout_height="144dp"
-        android:layout_marginTop="20dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scheduleCardView">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:id="@+id/textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="52dp"
@@ -116,56 +32,78 @@
 
             <ImageView
                 android:id="@+id/imageView"
-                android:layout_width="29dp"
-                android:layout_height="30dp"
+                android:layout_width="24dp"
+                android:layout_height="28dp"
                 android:layout_marginTop="16dp"
-                android:layout_marginEnd="16dp"
-                app:layout_constraintEnd_toStartOf="@+id/textView"
+                android:layout_marginEnd="11dp"
+                app:layout_constraintEnd_toStartOf="@+id/scheduleCourseNameTextView"
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/ic_baseline_school_24" />
 
             <TextView
-                android:id="@+id/textView2"
+                android:id="@+id/scheduleDayOfWeekTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="52dp"
-                android:layout_marginTop="24dp"
+                android:layout_marginTop="68dp"
                 android:text="day of week"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
                 android:id="@+id/imageView2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="20dp"
-                app:layout_constraintEnd_toStartOf="@+id/textView2"
-                app:srcCompat="@drawable/ic_baseline_calendar_today_24"
-                tools:layout_editor_absoluteY="68dp" />
+                android:layout_width="22dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="12dp"
+                app:layout_constraintEnd_toStartOf="@+id/scheduleDayOfWeekTextView"
+                app:layout_constraintTop_toBottomOf="@+id/imageView"
+                app:srcCompat="@drawable/ic_baseline_calendar_today_24" />
 
             <TextView
-                android:id="@+id/textView3"
+                android:id="@+id/scheduleStartTimeTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="4dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginStart="130dp"
+                android:layout_marginTop="58dp"
                 android:text="start"
                 android:textColor="@color/black"
-                app:layout_constraintStart_toEndOf="@+id/textView2"
-                app:layout_constraintTop_toBottomOf="@+id/textView" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/textView4"
+                android:id="@+id/scheduleEndTimeTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="44dp"
+                android:layout_marginStart="130dp"
+                android:layout_marginTop="76dp"
                 android:text="end"
                 android:textColor="@color/black"
-                app:layout_constraintStart_toEndOf="@+id/textView2"
-                app:layout_constraintTop_toBottomOf="@+id/textView" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/scheduleCourseDescriptionTextView"
+                android:layout_width="375dp"
+                android:layout_height="49dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="100dp"
+                android:text="course description"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/dropCourseButton"
+                android:layout_width="141dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="39dp"
+                android:layout_marginTop="10dp"
+                android:text="DROP"
+                app:layout_constraintStart_toEndOf="@+id/scheduleCourseNameTextView"
+                app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

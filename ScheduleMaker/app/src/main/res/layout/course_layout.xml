@@ -8,7 +8,7 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
         android:layout_width="399dp"
-        android:layout_height="144dp"
+        android:layout_height="150dp"
         android:layout_marginTop="25dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -20,18 +20,22 @@
 
             <TextView
                 android:id="@+id/courseNameTextView"
-                android:layout_width="200dp"
-                android:layout_height="44dp"
+                android:layout_width="159dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="16dp"
                 android:text="course name"
                 android:textColor="#000000"
-                android:textSize="34sp"
+                android:textSize="24sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/courseDescriptionTextView"
-                android:layout_width="399dp"
-                android:layout_height="59dp"
+                android:layout_width="375dp"
+                android:layout_height="49dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="16dp"
                 android:text="course description"
                 android:textSize="20sp"
                 app:layout_constraintStart_toStartOf="parent"
@@ -41,7 +45,8 @@
                 android:id="@+id/dayOfWeekTextView"
                 android:layout_width="91dp"
                 android:layout_height="28dp"
-                android:layout_marginTop="14dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="8dp"
                 android:text="day of week"
                 android:textAlignment="viewStart"
                 android:textColor="#000000"
@@ -50,23 +55,25 @@
                 app:layout_constraintTop_toBottomOf="@+id/courseNameTextView" />
 
             <TextView
-                android:id="@+id/startTimeTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="start"
-                android:textColor="#000000"
-                app:layout_constraintStart_toEndOf="@+id/dayOfWeekTextView"
-                app:layout_constraintTop_toBottomOf="@+id/courseNameTextView" />
-
-            <TextView
                 android:id="@+id/endTimeTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
                 android:layout_marginTop="4dp"
                 android:text="end"
                 android:textColor="#000000"
                 app:layout_constraintStart_toEndOf="@+id/dayOfWeekTextView"
                 app:layout_constraintTop_toBottomOf="@+id/startTimeTextView" />
+
+            <TextView
+                android:id="@+id/startTimeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:text="start"
+                android:textColor="#000000"
+                app:layout_constraintStart_toEndOf="@+id/dayOfWeekTextView"
+                app:layout_constraintTop_toBottomOf="@+id/courseNameTextView" />
 
             <Button
                 android:id="@+id/addCourseButton"
@@ -77,6 +84,26 @@
                 android:text="Add Course"
                 app:layout_constraintStart_toEndOf="@+id/courseNameTextView"
                 app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_baseline_school_24" />
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView3"
+                app:srcCompat="@drawable/ic_baseline_calendar_today_24" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
