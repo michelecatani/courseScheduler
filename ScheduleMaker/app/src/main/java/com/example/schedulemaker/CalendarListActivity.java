@@ -9,7 +9,7 @@ import android.widget.Button;
 
 public class CalendarListActivity extends AppCompatActivity {
 
-    Button mondayButton, tuesdayButton, wednesdayButton, thursdayButton, fridayButton;
+    Button mondayButton, tuesdayButton, wednesdayButton, thursdayButton, allCoursesButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,7 +20,7 @@ public class CalendarListActivity extends AppCompatActivity {
         tuesdayButton = findViewById(R.id.tuesdayButton);
         wednesdayButton = findViewById(R.id.wednesdayButton);
         thursdayButton = findViewById(R.id.thursdayButton);
-        fridayButton = findViewById(R.id.fridayButton);
+        allCoursesButton = findViewById(R.id.allCoursesButton);
 
         mondayButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,11 +54,12 @@ public class CalendarListActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        fridayButton.setOnClickListener(new View.OnClickListener() {
+
+        allCoursesButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(CalendarListActivity.this, ViewSchedule.class);
-                intent.putExtra("day", "Friday");
+                intent.putExtra("day", "All");
                 startActivity(intent);
             }
         });

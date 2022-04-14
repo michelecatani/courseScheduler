@@ -1,8 +1,11 @@
 package com.example.schedulemaker;
 
+import android.content.res.ColorStateList;
+import android.graphics.Color;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.DiffUtil;
@@ -30,21 +33,26 @@ public class RecyclerAdapter extends ListAdapter<Course, CourseViewHolder> {
         courseList = FileHandler.readData(holder.itemView.getContext());
 
         if (courseList.contains(current.courseName)) {
+            Log.d("nis", holder.courseName.getText().toString() + "  in RecyclerAdapter.java in contain");
             holder.addCourseButton.setText("Already registered!");
             holder.addCourseButton.setClickable(false);
             holder.addCourseButton.setEnabled(false);
+            holder.cardView.setCardBackgroundColor(Color.parseColor("#a3c4bc"));
         }
 
         holder.addCourseButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Log.d("nis", holder.courseName.getText().toString() + "  in RecyclerAdapter.java");
                 // uncomment below line if u wanna test to ensure that the correct courseName being shown
-                // Toast.makeText(itemView.getContext(), courseName.getText().toString(), Toast.LENGTH_LONG).show();
+                Toast.makeText(view.getContext(), holder.courseName.getText().toString() + " added successfully!", Toast.LENGTH_SHORT).show();
                 courseList.add(current.courseName);
                 FileHandler.writeData(holder.itemView.getContext(), courseList);
                 holder.addCourseButton.setText("Already registered!");
                 holder.addCourseButton.setClickable(false);
                 holder.addCourseButton.setEnabled(false);
+                holder.cardView.setCardBackgroundColor(Color.parseColor("#a3c4bc"));
+//                holder.cardView.setCardBackgroundColor("black");
             }
         });
     }

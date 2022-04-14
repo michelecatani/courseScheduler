@@ -9,6 +9,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.lang.reflect.Array;
@@ -21,10 +22,12 @@ public class CourseViewHolder extends RecyclerView.ViewHolder {
     TextView startTime;
     TextView endTime;
     Button addCourseButton;
+    CardView cardView;
 //    ArrayList<String> courseList;
 
     public CourseViewHolder(View itemView) {
         super(itemView);
+        cardView = itemView.findViewById(R.id.cardView);
         courseName = itemView.findViewById(R.id.courseNameTextView);
         courseDescription = itemView.findViewById(R.id.courseDescriptionTextView);
         dayOfWeek = itemView.findViewById(R.id.dayOfWeekTextView);

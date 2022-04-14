@@ -76,11 +76,23 @@ public class ViewSchedule extends AppCompatActivity {
 
 ////            adapter.submitList(courses);
 ////            this.courseList = new ArrayList<Course>(courses);
-            for (Course c : courses) {
-                if (getIntent().getStringExtra("day").equals(c.dayOfWeek) && names.contains(c.courseName)) {
-                    courseList.add(new Course(c.courseName, c.courseDescription, c.dayOfWeek, c.startTime, c.endTime));
-                    Log.d("nis", names + " names");
-                    showView = true;
+            if (getIntent().getStringExtra("day").equals("All")) {
+
+                for (Course c : courses) {
+                    if (names.contains(c.courseName)) {
+                        courseList.add(new Course(c.courseName, c.courseDescription, c.dayOfWeek, c.startTime, c.endTime));
+                        showView = true;
+                    }
+                }
+
+            } else {
+
+                for (Course c : courses) {
+                    if (getIntent().getStringExtra("day").equals(c.dayOfWeek) && names.contains(c.courseName)) {
+                        courseList.add(new Course(c.courseName, c.courseDescription, c.dayOfWeek, c.startTime, c.endTime));
+                        Log.d("nis", names + " names");
+                        showView = true;
+                    }
                 }
             }
 //            Log.d("nis", courseList.toString() + " ed");
