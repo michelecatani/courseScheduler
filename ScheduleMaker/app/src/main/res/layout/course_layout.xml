@@ -3,13 +3,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
-        android:layout_width="399dp"
+        android:layout_width="385dp"
         android:layout_height="150dp"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"
+        app:cardBackgroundColor="@color/cardColor"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -32,11 +37,12 @@
 
             <TextView
                 android:id="@+id/courseDescriptionTextView"
-                android:layout_width="375dp"
-                android:layout_height="49dp"
-                android:layout_marginStart="12dp"
+                android:layout_width="368dp"
+                android:layout_height="46dp"
+                android:layout_marginStart="8dp"
                 android:layout_marginTop="16dp"
                 android:text="course description"
+                android:textColor="@color/black"
                 android:textSize="20sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/dayOfWeekTextView" />
@@ -58,7 +64,7 @@
                 android:id="@+id/endTimeTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="12dp"
+                android:layout_marginStart="1dp"
                 android:layout_marginTop="4dp"
                 android:text="end"
                 android:textColor="#000000"
@@ -69,7 +75,7 @@
                 android:id="@+id/startTimeTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="12dp"
+                android:layout_marginStart="1dp"
                 android:text="start"
                 android:textColor="#000000"
                 app:layout_constraintStart_toEndOf="@+id/dayOfWeekTextView"
@@ -79,10 +85,12 @@
                 android:id="@+id/addCourseButton"
                 android:layout_width="140dp"
                 android:layout_height="70dp"
-                android:layout_marginStart="43dp"
                 android:layout_marginTop="7dp"
+                android:layout_marginEnd="5dp"
+                android:backgroundTint="@color/buttonColor"
                 android:text="Add Course"
-                app:layout_constraintStart_toEndOf="@+id/courseNameTextView"
+                app:cornerRadius="50dp"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView

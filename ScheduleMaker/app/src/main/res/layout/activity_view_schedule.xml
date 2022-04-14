@@ -4,12 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_gravity="center_horizontal"
     tools:context=".ViewSchedule">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/schedulerRecyclerView"
-        android:layout_width="392dp"
-        android:layout_height="699dp"
+        android:layout_width="387dp"
+        android:layout_height="700dp"
+        android:foregroundGravity="center_horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:listitem="@layout/schedule_course_layout" />

@@ -7,52 +7,89 @@
     tools:context=".CalendarListActivity">
 
     <LinearLayout
-        android:layout_width="409dp"
-        android:layout_height="601dp"
+        android:id="@+id/linearLayout"
+        android:layout_width="381dp"
+        android:layout_height="419dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="1dp">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <Button
             android:id="@+id/mondayButton"
-            android:layout_width="match_parent"
+            android:layout_width="250dp"
             android:layout_height="84dp"
-            android:text="Monday" />
+            android:layout_gravity="center"
+            android:backgroundTint="@color/ClassListButton"
+            android:text="Monday"
+            app:cornerRadius="15dp" />
 
         <Button
             android:id="@+id/tuesdayButton"
-            android:layout_width="match_parent"
+            android:layout_width="250dp"
             android:layout_height="84dp"
-            android:text="Tuesday" />
+            android:layout_gravity="center"
+            android:backgroundTint="@color/ClassListButton"
+            android:text="Tuesday"
+            app:cornerRadius="15dp" />
 
         <Button
             android:id="@+id/wednesdayButton"
-            android:layout_width="match_parent"
+            android:layout_width="250dp"
             android:layout_height="84dp"
-            android:text="Wednesday" />
+            android:layout_gravity="center"
+            android:backgroundTint="@color/ClassListButton"
+            android:text="Wednesday"
+            app:cornerRadius="15dp" />
 
         <Button
             android:id="@+id/thursdayButton"
-            android:layout_width="match_parent"
+            android:layout_width="250dp"
             android:layout_height="84dp"
-            android:text="Thursday" />
+            android:layout_gravity="center"
+            android:backgroundTint="@color/ClassListButton"
+            android:text="Thursday"
+            app:cornerRadius="15dp" />
 
         <Button
-            android:id="@+id/fridayButton"
-            android:layout_width="match_parent"
+            android:id="@+id/allCoursesButton"
+            android:layout_width="250dp"
             android:layout_height="84dp"
-            android:text="Friday" />
+            android:layout_gravity="center_horizontal"
+            android:backgroundTint="@color/ClassListButton"
+            android:text="All Registered courses"
+            app:cornerRadius="15dp" />
 
-        <Button
-            android:id="@+id/saturdayButton"
-            android:layout_width="match_parent"
-            android:layout_height="84dp"
-            android:text="Saturday" />
-
-        <Button
-            android:id="@+id/sundayButton"
-            android:layout_width="match_parent"
-            android:layout_height="84dp"
-            android:text="Sunday" />
     </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="217dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="94dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="95dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.461"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:srcCompat="@drawable/ic_baseline_access_time_24" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="196dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="131dp"
+        android:layout_marginEnd="131dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="Schedule"
+        android:textColor="@color/schedule03"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 </androidx.constraintlayout.widget.ConstraintLayout>
